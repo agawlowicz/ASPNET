@@ -8,5 +8,6 @@ namespace Testing
     {
         public IEnumerable<Product> GetAllProducts(); //stubbed out method
         public Product GetProduct(int id); // View one product at a time
+        public void UpdateProduct(Product product); //update product information
     }
 }
