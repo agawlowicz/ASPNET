@@ -33,5 +33,15 @@ namespace Testing.Controllers
 
             return View(products);
         }
+
+        // Pass in product as argument, serves as Model we will work within our ViewProduct.cshtml View
+        public IActionResult ViewProduct(int id)
+        {
+            var product = repo.GetProduct(id);
+            return View(product);
+        }
     }
 }
+
+//URl: Product/ViewProduct/id: Product is our Controller. ViewProduct is method located in ProductController.
+//id is parameter passed into the ViewProductMethod
